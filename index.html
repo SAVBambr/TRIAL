@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ТриалХолод — ремонт и монтаж холодильного оборудования и кондиционеров</title>
+<meta name="description" content="Монтаж и ремонт холодильного оборудования и кондиционеров. Два мастера с опытом 20+ лет. Гарантия год. Оставьте заявку на сайте.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#1C7EA5" stroke-width="2"/>
+        <path d="M20 6V34M9 12L31 28M31 12L9 28" stroke="#1C7EA5" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="4" fill="#D4501E"/>
+      </svg>
+      <span>ТРИАЛХОЛОД<small>монтаж и ремонт холода</small></span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav">
+      <a href="index.html" class="active">Главная</a>
+      <a href="catalog.html">Каталог услуг</a>
+      <a href="portfolio.html">Портфолио</a>
+      <a href="articles.html">Статьи и вопросы</a>
+      <a href="index.html#request">Оставить заявку</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="tel:+79990000000" class="header-phone"><small>Заявки и звонки</small>+7 (999) 000-00-00</a>
+      <a href="index.html#request" class="btn btn-primary btn-sm">Оставить заявку</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <div class="eyebrow">Монтаж · Ремонт · Обслуживание</div>
+      <h1>Ремонт и монтаж <em>холодильного оборудования</em> и кондиционеров</h1>
+      <p class="lead">Два мастера с личным опытом 20+ лет каждый. Приезжаем, находим причину и чиним на месте — от бытового холодильника до промышленной холодильной камеры. Без диспетчеров и посредников.</p>
+      <div class="hero-actions">
+        <a href="#request" class="btn btn-primary">Оставить заявку на ремонт</a>
+        <a href="catalog.html" class="btn btn-outline">Смотреть каталог услуг</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>20+</b><span>лет опыта у каждого мастера</span></div>
+        <div><b>2</b><span>мастера, а не диспетчеры</span></div>
+        <div><b>1 год</b><span>гарантии на работы</span></div>
+        <div><b>0</b><span>посредников между вами и мастером</span></div>
+      </div>
+    </div>
+
+    <div class="gauge-wrap">
+      <svg viewBox="0 0 320 320" width="100%" style="max-width:340px">
+        <circle cx="160" cy="160" r="140" fill="#FAFBFC" stroke="#E1E8ED" stroke-width="2"/>
+        <circle cx="160" cy="160" r="112" fill="none" stroke="#D6EAF3" stroke-width="24" stroke-dasharray="1 6.2" stroke-linecap="round" transform="rotate(-210 160 160)" />
+        <!-- дуга низкого/рабочего давления -->
+        <path d="M 68 232 A 112 112 0 1 1 252 232" fill="none" stroke="#BFE3F0" stroke-width="3"/>
+        <!-- метки шкалы, температура -->
+        <g font-family="JetBrains Mono" font-size="11" fill="#52657A">
+          <text x="55" y="248" text-anchor="middle">-40°</text>
+          <text x="46" y="160" text-anchor="middle">-20°</text>
+          <text x="70" y="80" text-anchor="middle">0°</text>
+          <text x="160" y="50" text-anchor="middle">+20°</text>
+          <text x="250" y="80" text-anchor="middle">+40°</text>
+          <text x="274" y="160" text-anchor="middle">+60°</text>
+          <text x="265" y="248" text-anchor="middle">+80°</text>
+        </g>
+        <!-- центральная надпись -->
+        <text x="160" y="185" text-anchor="middle" font-family="Oswald" font-size="15" letter-spacing="1" fill="#16283D">СЕРВИС</text>
+        <text x="160" y="203" text-anchor="middle" font-family="JetBrains Mono" font-size="11" letter-spacing="1" fill="#D4501E">РАБОТАЕТ</text>
+        <!-- стрелка -->
+        <g id="gaugeNeedle" style="transform-origin:160px 160px; transform: rotate(-140deg);">
+          <line x1="160" y1="160" x2="160" y2="62" stroke="#D4501E" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="160" cy="160" r="9" fill="#16283D"/>
+          <circle cx="160" cy="160" r="3.5" fill="#D4501E"/>
+        </g>
+      </svg>
+      <div class="gauge-readout">Выезд мастера <b>сегодня</b> — по договорённости о времени</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ИНФО-ПОЛОСА ================= -->
+<div class="info-strip">
+  <div class="container">
+    <div class="info-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.6"/><path d="M6 6v12M18 6v12"/></svg>
+      <div><h4>Оплата наличными или переводом</h4><p>Как удобно — расчёт сразу после приёмки работ</p></div>
+    </div>
+    <div class="info-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3.5v6c0 5-3.4 8.6-8 10.5-4.6-1.9-8-5.5-8-10.5v-6L12 2z"/><path d="M9 12l2 2 4-4"/></svg>
+      <div><h4>Гарантия 1 год</h4><p>На все выполненные монтажные и ремонтные работы</p></div>
+    </div>
+    <div class="info-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="1.5"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+      <div><h4>Выезд по договорённости</h4><p>Согласовываем время напрямую с мастером, который поедет к вам</p></div>
+    </div>
+    <div class="info-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>
+      <div><h4>Юридический адрес</h4><p>Каширское шоссе, 88/26, Москва</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ДОВЕРИЕ ================= -->
+<section id="trust">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Почему нам доверяют</div>
+      <h2>Не диспетчерская служба, а два мастера, которых можно узнать по голосу</h2>
+      <p>За заявкой на ремонт часто стоит не мастер, а колл-центр, который передаёт её случайному подрядчику. У нас иначе: заявку принимает и выполняет один из двух мастеров-совладельцев.</p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="num">01</div>
+        <h3>20+ лет практики у каждого</h3>
+        <p>Не «команда специалистов», а два конкретных мастера, которые чинят холодильное оборудование и кондиционеры с 2000-х годов.</p>
+      </div>
+      <div class="trust-card">
+        <div class="num">02</div>
+        <h3>Без диспетчеров и посредников</h3>
+        <p>Вы обсуждаете поломку и время выезда напрямую с мастером, который приедет — а не с оператором call-центра.</p>
+      </div>
+      <div class="trust-card">
+        <div class="num">03</div>
+        <h3>Гарантия год на работы</h3>
+        <p>Если та же неисправность вернётся по нашей вине в течение года — приезжаем и устраняем её бесплатно.</p>
+      </div>
+      <div class="trust-card">
+        <div class="num">04</div>
+        <h3>Цена — до начала ремонта</h3>
+        <p>Называем стоимость по телефону или сразу после диагностики. Доплат «по ходу дела» не бывает.</p>
+      </div>
+      <div class="trust-card">
+        <div class="num">05</div>
+        <h3>Свой инструмент и запчасти</h3>
+        <p>Компрессоры, платы управления, фреон, расходники возим с собой — не теряем дни на ожидание заказа.</p>
+      </div>
+      <div class="trust-card">
+        <div class="num">06</div>
+        <h3>Быт и коммерция — без разницы</h3>
+        <p>Обслуживаем и холодильник на домашней кухне, и холодильную камеру магазина или кафе.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="gauge-divider" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  <div class="mid"></div>
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div></div>
+
+<!-- ================= КОМАНДА ================= -->
+<section class="section-alt" id="team">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Команда</div>
+      <h2>Два мастера. И да, оба — Дмитрии</h2>
+      <p>Это не опечатка и не пример из шаблона — так совпало. Клиенты обычно запоминают это быстрее, чем номер телефона мастера.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">ДМ</div>
+        <div>
+          <h3>Дмитрий</h3>
+          <div class="team-role">Монтаж и пусконаладка</div>
+          <p>Устанавливает сплит-системы, холодильные камеры, витрины и лари, выполняет обвязку фреоновых магистралей и запуск оборудования.</p>
+          <div class="team-tags"><span>Опыт 20+ лет</span><span>Монтаж</span><span>Пусконаладка</span></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">ДМ</div>
+        <div>
+          <h3>Дмитрий</h3>
+          <div class="team-role">Диагностика и ремонт</div>
+          <p>Находит утечки фреона, меняет компрессоры и платы управления, обслуживает бытовое и промышленное холодильное оборудование.</p>
+          <div class="team-tags"><span>Опыт 20+ лет</span><span>Диагностика</span><span>Ремонт</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= УСЛУГИ (превью) ================= -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Что делаем</div>
+      <h2>Монтаж, ремонт и обслуживание</h2>
+      <p>Полный список работ и ориентировочные цены — в каталоге услуг.</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="14" height="12" rx="1"/><path d="M17 10l4-2v8l-4-2"/></svg>
+        <h3>Монтаж кондиционеров</h3>
+        <p>Установка сплит-систем в квартирах, офисах и на коммерческих объектах «под ключ».</p>
+        <a class="more" href="catalog.html#montaj">Подробнее в каталоге →</a>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="2" width="16" height="20" rx="1.5"/><path d="M4 11h16M8 6h.01M8 15h.01"/></svg>
+        <h3>Ремонт холодильного оборудования</h3>
+        <p>Холодильники, морозильные лари, витрины, камеры — диагностика и ремонт на месте.</p>
+        <a class="more" href="catalog.html#remont">Подробнее в каталоге →</a>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="5"/></svg>
+        <h3>Заправка фреоном</h3>
+        <p>Дозаправка и полная заправка систем с проверкой герметичности контура.</p>
+        <a class="more" href="catalog.html#zapravka">Подробнее в каталоге →</a>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l1.8 5.6H20l-4.6 3.5 1.8 5.6L12 13.2 6.8 16.7l1.8-5.6L4 7.6h6.2z"/></svg>
+        <h3>Техническое обслуживание</h3>
+        <p>Регулярный осмотр и чистка оборудования — предотвращаем поломки до того, как они случились.</p>
+        <a class="more" href="catalog.html#to">Подробнее в каталоге →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОРТФОЛИО (превью) ================= -->
+<section class="section-alt" id="portfolio-preview">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Портфолио</div>
+      <h2>Несколько объектов из последних работ</h2>
+      <p>Полный список выполненных работ с описанием — на отдельной странице.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-media">
+          <span class="portfolio-tag">Монтаж</span>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="14" width="34" height="24" rx="2"/><path d="M42 22l14-6v22l-14-6"/></svg>
+        </div>
+        <div class="portfolio-body">
+          <h4>Сплит-система в офисе, 40 м²</h4>
+          <p>Монтаж внешнего и внутреннего блоков, прокладка трассы, пусконаладка.</p>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-media">
+          <span class="portfolio-tag">Ремонт</span>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="14" y="6" width="36" height="52" rx="3"/><path d="M14 28h36M22 14h.01M22 40h.01"/></svg>
+        </div>
+        <div class="portfolio-body">
+          <h4>Замена компрессора, холодильная камера</h4>
+          <p>Диагностика, замена компрессора и заправка контура в продуктовом магазине.</p>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-media">
+          <span class="portfolio-tag">Обслуживание</span>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="18" width="44" height="28" rx="2"/><path d="M18 46v6h28v-6"/></svg>
+        </div>
+        <div class="portfolio-body">
+          <h4>Витрина кафе, устранение течи фреона</h4>
+          <p>Поиск утечки, пайка контура, вакуумирование и дозаправка.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:36px">
+      <a href="portfolio.html" class="btn btn-outline">Смотреть все работы</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФОРМА ЗАЯВКИ ================= -->
+<section id="request">
+  <div class="container">
+    <div class="form-wrap">
+      <div class="form-panel">
+        <div class="eyebrow" style="color:#8FD1EA">Заявка на ремонт</div>
+        <h2>Оставьте заявку — мастер перезвонит сам</h2>
+        <p>Никаких диспетчеров: заявку получает мастер, который сможет выехать. Он же согласует с вами удобное время.</p>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Укажите тип оборудования и что случилось — так мастер приедет с нужными запчастями
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Перезвоним в течение 30 минут в рабочее время
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Время выезда согласуем напрямую с мастером — под ваш график
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Оплата после выполнения работ — наличными или переводом
+          </li>
+        </ul>
+        <div class="contact-line">
+          Или позвоните сами: <a href="tel:+79990000000">+7 (999) 000-00-00</a><br>
+          <a href="mailto:info@trialholod.ru">info@trialholod.ru</a>
+        </div>
+      </div>
+
+      <form class="card-form" id="repairForm" novalidate>
+        <div class="form-success" id="formSuccess"></div>
+
+        <div class="field">
+          <label for="f-name">Имя</label>
+          <input type="text" id="f-name" name="name" placeholder="Как к вам обращаться" required>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-phone">Телефон</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="field">
+            <label for="f-equipment">Тип оборудования</label>
+            <select id="f-equipment" name="equipment" required>
+              <option value="" disabled selected>Выберите</option>
+              <option>Бытовой холодильник</option>
+              <option>Морозильный ларь / камера</option>
+              <option>Холодильная витрина</option>
+              <option>Кондиционер / сплит-система</option>
+              <option>Промышленная холодильная установка</option>
+              <option>Другое</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-issue">Что случилось</label>
+          <textarea id="f-issue" name="issue" placeholder="Кратко опишите неисправность или задачу"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="f-time">Удобное время для звонка</label>
+          <input type="text" id="f-time" name="time" placeholder="Например: сегодня после 18:00">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Это заявка на обратный звонок для согласования времени выезда — оплата и выезд не происходят автоматически.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ТРИАЛХОЛОД</div>
+        <p>Монтаж и ремонт холодильного оборудования и кондиционеров. Два мастера, 20+ лет опыта, гарантия год на все работы.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог услуг</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="articles.html">Статьи и вопросы</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="catalog.html#montaj">Монтаж кондиционеров</a></li>
+          <li><a href="catalog.html#remont">Ремонт оборудования</a></li>
+          <li><a href="catalog.html#to">Техобслуживание</a></li>
+          <li><a href="catalog.html#zapravka">Заправка фреоном</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <p><a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
+        <p><a href="mailto:info@trialholod.ru">info@trialholod.ru</a></p>
+        <p>Каширское шоссе, 88/26, Москва<br>Выезд по договорённости с мастером</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ООО «ТриалХолод». Юридический адрес: Каширское шоссе, 88/26, Москва.</span>
+      <span>Оплата наличными или переводом · Гарантия 1 год на выполненные работы</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
