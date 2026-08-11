@@ -262,15 +262,33 @@ section{ padding:88px 0; }
 /* ---------- trust block ---------- */
 .trust-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:1px;
   background:var(--line);
   border:1px solid var(--line);
+}
+@media (max-width:900px){
+  .trust-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:560px){
+  .trust-grid{ grid-template-columns:1fr; }
 }
 .trust-card{
   background:var(--paper);
   padding:32px 28px;
 }
+.trust-card--graphic{
+  display:flex; align-items:center; gap:32px;
+  padding:34px 40px;
+  border:1px solid var(--line);
+  border-top:none;
+  background:
+    repeating-linear-gradient(135deg, var(--paper-2) 0 2px, var(--paper) 2px 14px);
+}
+.trust-card--graphic svg{ width:120px; flex:0 0 auto; }
+.trust-card--graphic .graphic-caption{ }
+.trust-card--graphic .graphic-caption .eyebrow{ margin-bottom:8px; }
+.trust-card--graphic .graphic-caption p{ margin:0; font-size:14.5px; max-width:46ch; }
 .trust-card .num{
   font-family:var(--f-mono);
   font-size:12px;
@@ -586,4 +604,5 @@ footer.site-footer{
   .field-row{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr; }
   section{ padding:56px 0; }
+  .trust-card--graphic{ flex-direction:column; text-align:center; padding:28px 24px; }
 }
