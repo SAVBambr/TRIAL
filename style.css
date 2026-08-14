@@ -2,7 +2,7 @@
    ТРИАЛХОЛОД — общие стили
    Палитра: холодный "морозный" верх + тёплый акцент манометра (гейдж-красный)
    ========================================================================== */
-
+ 
 :root{
   --paper:      #FAFBFC;
   --paper-2:    #F1F5F8;
@@ -17,15 +17,15 @@
   --gauge-red-dk:#B23F14;
   --line:       #E1E8ED;
   --white:      #FFFFFF;
-
+ 
   --f-display: 'Oswald', 'Arial Narrow', sans-serif;
   --f-body: 'Manrope', 'Segoe UI', sans-serif;
   --f-mono: 'JetBrains Mono', 'Courier New', monospace;
-
+ 
   --radius: 2px;
   --container: 1180px;
 }
-
+ 
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
@@ -52,16 +52,16 @@ p{ margin:0 0 1em; color:var(--steel); }
   margin:0 auto;
   padding:0 28px;
 }
-
+ 
 :focus-visible{
   outline:3px solid var(--gauge-blue);
   outline-offset:2px;
 }
-
+ 
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
 }
-
+ 
 /* ---------- eyebrow / labels ---------- */
 .eyebrow{
   font-family:var(--f-mono);
@@ -80,7 +80,7 @@ p{ margin:0 0 1em; color:var(--steel); }
   background:var(--gauge-red);
   display:inline-block;
 }
-
+ 
 /* ---------- gauge tick divider (signature motif) ---------- */
 .gauge-divider{
   display:flex;
@@ -98,7 +98,7 @@ p{ margin:0 0 1em; color:var(--steel); }
 .gauge-divider .mid{
   flex:1 1 auto; height:1px; background:var(--line);
 }
-
+ 
 /* ---------- header ---------- */
 .site-header{
   position:sticky; top:0; z-index:50;
@@ -158,9 +158,9 @@ nav.main-nav a.active{ color:var(--gauge-blue-dk); font-weight:700; }
   white-space:nowrap;
 }
 .header-phone small{ display:block; font-size:10px; color:var(--steel-lt); font-weight:400; }
-
+ 
 .nav-toggle{ display:none; }
-
+ 
 /* ---------- buttons ---------- */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
@@ -195,7 +195,7 @@ nav.main-nav a.active{ color:var(--gauge-blue-dk); font-weight:700; }
 .btn-ghost:hover{ background:var(--frost); }
 .btn-sm{ padding:10px 18px; font-size:13.5px; }
 .btn-block{ width:100%; }
-
+ 
 /* ---------- hero ---------- */
 .hero{
   padding:76px 0 88px;
@@ -239,7 +239,7 @@ nav.main-nav a.active{ color:var(--gauge-blue-dk); font-weight:700; }
 .hero-stats div span{
   font-size:12.5px; color:var(--steel-lt); letter-spacing:.02em;
 }
-
+ 
 /* gauge illustration */
 .gauge-wrap{ display:flex; justify-content:center; }
 .gauge-readout{
@@ -251,14 +251,14 @@ nav.main-nav a.active{ color:var(--gauge-blue-dk); font-weight:700; }
   letter-spacing:.06em;
 }
 .gauge-readout b{ color:var(--gauge-red); }
-
+ 
 /* ---------- sections ---------- */
 section{ padding:88px 0; }
 .section-head{ max-width:640px; margin-bottom:48px; }
 .section-head h2{ font-size:clamp(26px,3vw,36px); text-transform:uppercase; }
 .section-head p{ font-size:16.5px; }
 .section-alt{ background:var(--paper-2); }
-
+ 
 /* ---------- trust block ---------- */
 .trust-grid{
   display:grid;
@@ -297,7 +297,7 @@ section{ padding:88px 0; }
 }
 .trust-card h3{ font-size:18px; margin-bottom:10px; }
 .trust-card p{ font-size:14.5px; margin:0; }
-
+ 
 /* ---------- team ---------- */
 .team-grid{
   display:grid;
@@ -329,7 +329,7 @@ section{ padding:88px 0; }
   padding:4px 9px;
   color:var(--steel);
 }
-
+ 
 /* ---------- services preview cards ---------- */
 .service-grid{
   display:grid;
@@ -354,7 +354,7 @@ section{ padding:88px 0; }
   font-size:13px; font-weight:700; color:var(--gauge-red);
   text-decoration:none;
 }
-
+ 
 /* ---------- catalog page ---------- */
 .cat-section{ padding:0 0 64px; }
 .cat-section-title{
@@ -377,7 +377,7 @@ section{ padding:88px 0; }
 .cat-item h4{ font-size:16px; margin-bottom:6px; display:flex; justify-content:space-between; gap:10px; align-items:baseline;}
 .cat-item .price{ font-family:var(--f-mono); font-size:13px; color:var(--gauge-blue-dk); white-space:nowrap; font-weight:700;}
 .cat-item p{ font-size:14px; margin:0; }
-
+ 
 /* ---------- portfolio ---------- */
 .portfolio-grid{
   display:grid;
@@ -409,7 +409,7 @@ section{ padding:88px 0; }
 .portfolio-note{
   font-size:14px; color:var(--steel-lt); margin-top:36px; border-top:1px dashed var(--line); padding-top:20px;
 }
-
+ 
 /* ---------- FAQ / accordion ---------- */
 .faq-list{ border-top:1px solid var(--line); }
 .faq-item{ border-bottom:1px solid var(--line); }
@@ -429,7 +429,7 @@ section{ padding:88px 0; }
   max-height:0; overflow:hidden; transition:max-height .25s ease;
 }
 .faq-a p{ padding:0 4px 22px; font-size:14.5px; max-width:70ch; }
-
+ 
 /* ---------- articles ---------- */
 .article-grid{
   display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -457,7 +457,7 @@ section{ padding:88px 0; }
 }
 .article-full{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
 .article-card.open .article-full{ max-height:900px; }
-
+ 
 /* ---------- form ---------- */
 .form-wrap{
   display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;
@@ -477,7 +477,7 @@ section{ padding:88px 0; }
 .form-panel li svg{ width:20px; height:20px; flex:0 0 auto; color:var(--gauge-red); margin-top:1px; }
 .form-panel .contact-line{ margin-top:30px; padding-top:24px; border-top:1px solid #2A3E52; font-family:var(--f-mono); font-size:14px;}
 .form-panel .contact-line a{ color:#fff; text-decoration:none; }
-
+ 
 .card-form{
   background:var(--white);
   border:1px solid var(--line);
@@ -516,7 +516,12 @@ section{ padding:88px 0; }
   margin-bottom:18px;
 }
 .form-success.show{ display:block; }
-
+.form-success.form-error{
+  border-color:var(--gauge-red);
+  background:#FBE7E0;
+  color:var(--gauge-red-dk);
+}
+ 
 /* ---------- payment / footer info strip ---------- */
 .info-strip{
   border-top:1px solid var(--line);
@@ -535,7 +540,7 @@ section{ padding:88px 0; }
 .info-item svg{ width:26px; height:26px; flex:0 0 auto; color:var(--gauge-red); }
 .info-item h4{ font-size:14.5px; margin-bottom:4px; }
 .info-item p{ font-size:13px; margin:0; }
-
+ 
 /* ---------- footer ---------- */
 footer.site-footer{
   background:var(--ink);
@@ -560,7 +565,7 @@ footer.site-footer{
   font-size:12.5px; color:#7186997;
   color:#7B8FA3;
 }
-
+ 
 /* ---------- page hero (inner pages) ---------- */
 .page-hero{
   padding:56px 0 48px;
@@ -575,7 +580,7 @@ footer.site-footer{
 }
 .breadcrumb a{ color:var(--steel-lt); text-decoration:none; }
 .breadcrumb a:hover{ color:var(--gauge-blue-dk); }
-
+ 
 /* ---------- responsive ---------- */
 @media (max-width: 980px){
   .hero .container{ grid-template-columns:1fr; }
@@ -606,3 +611,4 @@ footer.site-footer{
   section{ padding:56px 0; }
   .trust-card--graphic{ flex-direction:column; text-align:center; padding:28px 24px; }
 }
+ 
