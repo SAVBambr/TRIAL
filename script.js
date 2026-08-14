@@ -1,7 +1,7 @@
 // ТРИАЛХОЛОД — общие скрипты сайта
-
+ 
 document.addEventListener('DOMContentLoaded', () => {
-
+ 
   /* ---------- бургер-меню ---------- */
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
   }
-
+ 
   /* ---------- стрелка манометра в hero ---------- */
   const needle = document.getElementById('gaugeNeedle');
   if (needle) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       needle.style.transform = 'rotate(58deg)';
     });
   }
-
+ 
   /* ---------- FAQ аккордеон ---------- */
   document.querySelectorAll('.faq-item').forEach(item => {
     const btn = item.querySelector('.faq-q');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
+ 
   /* ---------- статьи "читать полностью" ---------- */
   document.querySelectorAll('.read-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -51,23 +51,55 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = isOpen ? 'Читать статью →' : 'Свернуть ↑';
     });
   });
-
+ 
   /* ---------- форма заявки на ремонт ---------- */
   const form = document.getElementById('repairForm');
   if (form) {
     const success = document.getElementById('formSuccess');
-    form.addEventListener('submit', (e) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+ 
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
+ 
       const name = form.querySelector('#f-name').value.trim();
-      success.textContent = `Спасибо, ${name || 'заявка принята'}! Мастер свяжется с вами в течение 30 минут, чтобы согласовать удобное время выезда.`;
-      success.classList.add('show');
-      form.reset();
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const originalBtnText = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Отправляем…';
+      }
+      success.classList.remove('show', 'form-error');
+ 
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+ 
+        if (response.ok) {
+          success.textContent = `Спасибо, ${name || 'заявка принята'}! Мастер свяжется с вами в течение 30 минут, чтобы согласовать удобное время выезда.`;
+          success.classList.add('show');
+          form.reset();
+        } else {
+          success.textContent = 'Не получилось отправить заявку. Позвоните нам напрямую по телефону, указанному на сайте — так будет быстрее.';
+          success.classList.add('show', 'form-error');
+        }
+      } catch (err) {
+        success.textContent = 'Не получилось отправить заявку — проверьте интернет-соединение и попробуйте ещё раз, либо позвоните нам напрямую.';
+        success.classList.add('show', 'form-error');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     });
   }
-
+ 
 });
+ 
